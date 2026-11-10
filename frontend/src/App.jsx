@@ -3,8 +3,7 @@ import axios from 'axios';
 import { Database, Code2, Sparkles, History, Copy, Check, LogOut, Lock, Mail } from 'lucide-react';
 
 export default function App() {
-  const apiBase = 'http://localhost:5000/api';
-  const [token, setToken] = useState(localStorage.getItem('token') || '');
+const apiBase = import.meta.env.VITE_API_BASE || 'https://querycraft-backend-z178.onrender.com/api';  const [token, setToken] = useState(localStorage.getItem('token') || '');
   const [userEmail, setUserEmail] = useState(localStorage.getItem('userEmail') || '');
   const [isLoginView, setIsLoginView] = useState(true);
   const [authEmail, setAuthEmail] = useState('');
